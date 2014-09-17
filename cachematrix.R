@@ -2,16 +2,14 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
-        #implemetation of the function that sets the cached value 
         set <- function(y) {
                 x <<- y
                 m <<- NULL
         }
-        #implemetation of the function that retrieves the cached value 
         get <- function() x
-        #implemetation of the function that sets the inverse
+        #implemetation of the function that sets the cached inverse
         setinverse <- function(inverse) m <<- inverse
-        #implemetation of the function that gets the inverse
+        #implemetation of the function that gets the cached inverse
         getinverse <- function() m
         #the list returned contains the functions above
         list(set = set, get = get,
